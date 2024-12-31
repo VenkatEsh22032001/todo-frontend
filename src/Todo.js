@@ -9,7 +9,7 @@ function Todo() {
     const [editId, setEditId] = useState(-1);
     const [editTitle, setEditTitle] = useState("");
     const [editDescription, setEditDescription] = useState("");
-    const apiUrl = "http://localhost:5000"
+    const apiUrl = "http://54.146.219.37:5000"
 
     const handleSubmit = () =>{
         setError('')
