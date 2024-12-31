@@ -116,7 +116,7 @@ function Todo() {
   return (
     <>
     <div className='row p-3 bg-success text-light' >
-        <h1>Todo Project With MernStack</h1>
+        <h1>Todo Project By Venki Mawa</h1>
     </div>
     <div className='row'>
         <h3>Add Item</h3>
