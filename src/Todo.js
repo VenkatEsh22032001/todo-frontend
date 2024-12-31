@@ -61,7 +61,7 @@ function Todo() {
                 if(res.ok){
 
                     const updatedTodos=todos.map((item)=>{
-                        if(item._id == editId){
+                        if(item._id === editId){
                             item.title = editTitle;
                             item.description = editDescription;
                         }
@@ -102,9 +102,7 @@ function Todo() {
             fetch(apiUrl+'/todos/'+id, {
                 method: "DELETE"
             })
-            .then(()=>{
-                const updatedTodos = todos.filter((item)=> item._id !== id)
-            })
+           
         }
     }
 
@@ -139,7 +137,7 @@ function Todo() {
                     todos.map((item)=><li className='list-group-item bg-info d-flex justify-content-between align-items-center my-2'>
                             <div className='d-flex flex-column me-2'>
                                 {
-                                    editId == -1 || editId !== item._id ?
+                                    editId === -1 || editId !== item._id ?
                                     <>
                                     <span className='fw-bold'>{item.title}</span>
                                     <span>{item.description}</span>
@@ -161,7 +159,7 @@ function Todo() {
                                 <button className='btn btn-warning' onClick={handleUpdate}>Update</button>
                                 }
                                 {
-                                editId == -1 ?
+                                editId === -1 ?
                                 <button className='btn btn-danger' onClick={()=>handleDelete(item._id)}>Delete</button>:
                                 <button className='btn btn-danger' onClick={handleEditCancel}>Cancel</button>
                                 }   
